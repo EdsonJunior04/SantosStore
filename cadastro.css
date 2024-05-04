@@ -1,0 +1,49 @@
+.container_title{
+
+    display: flex;
+    justify-content: center;
+
+}
+.container_title h1{
+    font-size: 40px;
+}
+
+.container_form{
+    /* background-color: yellow; */
+    width: auto;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message_error{
+    color: red;
+    font-size: 20px;
+}
+
+form {
+    /* background-color: blue; */
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container_form input{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    width: 20vw;
+    height: 2.5vh;
+    margin-bottom: 20px;
+}
+
+.container_form select{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    width: 20.4vw;
+    height: 2.5vh;
+    margin-bottom: 20px;
+}

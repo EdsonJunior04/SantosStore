@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+header {
+    background-color: black;
+    color: white;
+}
+
+.logo {
+    width: 30%;
+}
+
+/* Estilização do LOGOTIPO */
+.logo_caixa {
+    width: 940px;
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+nav a:hover {
+    border: 1px solid red;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.titulo-separador {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.titulo-separador h2 {
+    margin-bottom: 10px;
+}
+
+hr {
+    border: 1px solid #ddd;
+}
+
+.excel-table {
+    width: 60%;
+    margin: 0 auto; /* Centraliza a tabela */
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.excel-table th, .excel-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.excel-table th {
+    background-color: #f2f2f2;
+}
+
+/* Adicionando valores na coluna do total */
+.excel-table td:nth-child(6) {
+    font-weight: bold;
+    color: red;
+}

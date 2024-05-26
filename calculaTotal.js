@@ -78,3 +78,9 @@ function moedaFormata(valor) {
     valorFormatado = valorFormatado.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     return valorFormatado;
 }
+
+function format(val){
+    var valor = val.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+
+    return valor;
+}

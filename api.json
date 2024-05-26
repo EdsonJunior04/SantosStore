@@ -1,0 +1,39 @@
+{
+    "encomendas": [
+        {
+        "nome":"Chuteira Umbro Futsal Preta",
+        "produto": "Chuteira de Futsal",
+        "qtde": 1,
+        "unitario": 200,
+        "total": 0
+        },
+        {
+        "nome":"Chuteira Umbro Campo Branca",
+        "produto": "Chuteira de Futsal",
+        "qtde": 2,
+        "unitario": 600,
+        "total": 0
+        },
+        {
+        "nome":"Camisa do Preta Charlie Brown Jr",
+        "produto": "Camisa de Torcida",
+        "qtde": 4,
+        "unitario": 600,
+        "total": 0
+        },
+        {
+        "nome":"Camisa do branca Charlie Brown Jr",
+        "produto": "Camisa de Torcida",
+        "qtde": 1,
+        "unitario": 200,
+        "total": 0
+         },
+        {
+        "nome":"Camisa do Pelé",
+        "produto": "Camisa exclusiva",
+        "qtde": 2,
+        "unitario": 700,
+        "total": 0
+        }   
+    ]
+}

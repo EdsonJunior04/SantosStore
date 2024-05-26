@@ -55,4 +55,37 @@ function addNovaLinha() {
   document.getElementById('produto_select').value = '';
 }
 
+function addEncomenda(novaEncomenda){
+
+  var tabela = document.querySelector("#tabela");
+
+  tabela.appendChild(montaTR(novaEncomenda));
+}
+
+function montaTD(dado, classe = "") {
+
+  var td = document.createElement("td");
+  td.textContent = dado;
+
+  if (classe){
+    td.classList.add(classe)
+  }
+
+  return td;
+}
+
+function montaTR(novaEncomenda, classeTr = "cliente"){
+
+  var tr = document.createElement("tr");
+  tr.classList.add(classeTr)
+
+  tr.appendChild(montaTD(novaEncomenda.nome, "nome"));
+  tr.appendChild(montaTD(novaEncomenda.produto, "produto"));
+  tr.appendChild(montaTD(novaEncomenda.qtde, "qtde"));
+  tr.appendChild(montaTD(format(parseFloat(novaEncomenda.unitario)), "valorUnitario"));
+  tr.appendChild(montaTD(calculaTotal(novaEncomenda.qtde, novaEncomenda.unitario), "valorTotal"));
+
+  return tr;
+}
+
 addButton.addEventListener('click', addNovaLinha);

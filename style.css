@@ -58,25 +58,25 @@ hr {
     border: 1px solid #ddd;
 }
 
-.excel-table {
+.tabela {
     width: 60%;
     margin: 0 auto; /* Centraliza a tabela */
     border-collapse: collapse;
     margin-top: 20px;
 }
 
-.excel-table th, .excel-table td {
+.tabela th, .tabela td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
 }
 
-.excel-table th {
+.tabela th {
     background-color: #f2f2f2;
 }
 
 /* Adicionando valores na coluna do total */
-.excel-table td:nth-child(6) {
+.tabela td:nth-child(6) {
     font-weight: bold;
     color: red;
 }

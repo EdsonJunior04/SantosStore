@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="cadastro.css">
-  <title>Sua Página</title>
+  <title>SantosStore</title>
 </head>
 
 <body>
   <header>
     <div class="logo_caixa">
       <img src="https://txwzi764nr.map.azionedge.net/Custom/Content/Themes/Shared/Images/logo-santos-store-2.png"
-        title="V4 logo" class="logo" />
+        title="SantosStore logo" class="logo" />
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -35,7 +35,7 @@
       <input type="text" id="filtrar-tabela" placeholder="Digite o nome do cliente">
     </div>
 
-    <table class="excel-table">
+    <table id="tabela" class="tabela">
       <thead>
         <tr>
           <th>Nome</th>
@@ -76,6 +76,7 @@
         </tr>
       </tbody>
     </table>
+    <button id="buscar-encomendas" class="bot">Buscar Encomendas</button>
     <hr>
 
     <section class="container_title">
@@ -84,7 +85,6 @@
     <hr>
     <section class="container_form">
       <form action="">
-
 
         <label for="nome_input" name="nome_label" id="nome_label">Nome:</label>
         <input type="text" id="nome_input" name="nome_input" placeholder="Digite o nome do(a) cliente">
@@ -117,6 +117,7 @@
   <script src='cadastro.js'></script>
   <script src="deletarLinha.js"></script>
   <script src="filtrar.js"></script>
+  <script src="buscar_encomendas.js"></script>
 </body>
 
 </html>

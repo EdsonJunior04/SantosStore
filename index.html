@@ -17,6 +17,9 @@
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#calcula">Buscar Localidade</a></li>
+          <li><a href="index.html#cadastro">Cadastrar Encomendas</a></li>
+
         </ul>
       </nav>
     </div>
@@ -25,14 +28,16 @@
   <main>
 
 
-    <div class="titulo-separador">
-      <h2>Tabela de Exemplos</h2>
+    <div id="tabelaEx" class="titulo-separador">
+      <h1>Produtos</h1>
       <hr>
     </div>
 
-    <div>
-      <label for="filtrarTabela">Filtrar</label>
-      <input type="text" id="filtrar-tabela" placeholder="Digite o nome do cliente">
+    <div class="container_filter">
+      <div class="posicaoFilter">
+        <!-- <label for="filtrarTabela">Filtrar: </label> -->
+        <input type="text" id="filtrar-tabela" placeholder="Pesquisar produto">
+      </div>
     </div>
 
     <table id="tabela" class="tabela">
@@ -79,8 +84,8 @@
     <button id="buscar-encomendas" class="bot">Buscar Encomendas</button>
     <hr>
 
-    <section class="container_title">
-      <h1>Adicionar nova encomenda</h1>
+    <section id="cadastro" class="container_title">
+      <h1>Adicionar  nova encomenda</h1>
     </section>
     <hr>
     <section class="container_form">
@@ -106,17 +111,47 @@
         <input type="text" name="valorUnitario_input" id="valorUnitario_input"
           placeholder="Digite o valor unitário do produto">
 
-          <div class="message_error"></div>
-          
-          <button>Adicionar</button>
-        </form>
-    </section>
+        <div class="message_error"></div>
 
+        <button>Adicionar</button>
+      </form>
+    </section>
+    <hr>
+    <section id="calcula" class="container_title">
+      <h1>Buscar Localidade</h1>
+    </section>
+    <hr>
+    <section class="container_form">
+      <form action="">
+
+
+
+
+        <label for="cep_input" name="cep_label" id="cep_label">CEP:</label>
+        <input type="text" id="cep_input" name="cep_input" placeholder="Digite o seu CEP">
+
+
+        <label for="logradouro_input" id="logradouro_label" name="logradouro_label">Rua</label>
+        <input type="text" id="logradouro_input" name="logradouro_input" placeholder="Rua" disabled>
+
+        <label for="bairro_input" id="bairro_label" name="bairro_label">Bairro:</label>
+        <input type="test" id="bairro_input" name="bairro_input" placeholder="Bairro" disabled>
+
+
+        <label for="cidade_input" id="cidade_label" name="cidade_label">Cidade:</label>
+        <input type="text" name="cidade_input" id="cidade_input" placeholder="Cidade" disabled>
+
+        <label for="estado_input" id="estado_label" name="estado_label">Estado:</label>
+        <input type="text" name="estado_input" id="estado_input" placeholder="Estado" disabled>
+        
+      </form>
+    </section>
   </main>
   <script src='./calculaTotal.js'></script>
   <script src='cadastro.js'></script>
   <script src="deletarLinha.js"></script>
   <script src="filtrar.js"></script>
+  <script src="buscarCEP.js"></script>
   <script src="buscar_encomendas.js"></script>
 </body>
 

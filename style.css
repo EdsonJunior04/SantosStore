@@ -8,6 +8,10 @@ body {
 header {
     background-color: black;
     color: white;
+    position: fixed; /* Torna o header fixo */
+    top: 0; /* Posiciona o header no topo */
+    width: 100%; /* Define a largura do header como 100% da viewport */
+    z-index: 2; /* Define a ordem de camadas para garantir que o header fique sobre o conteúdo */
 }
 
 .logo {
@@ -47,7 +51,8 @@ nav a:hover {
 
 .titulo-separador {
     text-align: center;
-    margin: 20px 0;
+    /* margin: 20px 0; */
+    margin-top: 130px;
 }
 
 .titulo-separador h2 {
@@ -89,4 +94,28 @@ hr {
 
 .invisivel{
     display: none;
+}
+
+
+
+/* Calcular frete */
+
+
+
+.container_filter{
+    display: flex;
+    justify-content: center;
+}
+
+.posicaoFilter{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /* background-color: yellowgreen; */
+}
+
+.posicaoFilter input{
+    width: 300px;
+    height: 10px;
 }

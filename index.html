@@ -30,8 +30,8 @@
 
     <div id="tabelaEx" class="titulo-separador">
       <h1>Produtos</h1>
-      <hr>
     </div>
+    
 
     <div class="container_filter">
       <div class="posicaoFilter">
@@ -81,13 +81,15 @@
         </tr>
       </tbody>
     </table>
-    <button id="buscar-encomendas" class="bot">Buscar Encomendas</button>
+    <div class="container_btnEncomendas">
+      <button id="buscar-encomendas" class="bot btnEncomendas">Buscar Encomendas</button>
+    </div>
     <hr>
 
     <section id="cadastro" class="container_title">
-      <h1>Adicionar  nova encomenda</h1>
+      <h1>Adicionar nova encomenda</h1>
     </section>
-    <hr>
+    
     <section class="container_form">
       <form action="">
 
@@ -113,14 +115,17 @@
 
         <div class="message_error"></div>
 
-        <button id="btnCadastro">Adicionar</button>
+        <div class="container_btnCadastro">
+          <button id="btnCadastro" class="btnCadastro">Adicionar</button>
+        </div>
+
       </form>
     </section>
     <hr>
     <section id="calcula" class="container_title">
       <h1>Buscar Localidade</h1>
     </section>
-    <hr>
+    
     <section class="container_form">
       <form action="">
 
@@ -143,7 +148,7 @@
 
         <label for="estado_input" id="estado_label" name="estado_label">Estado:</label>
         <input type="text" name="estado_input" id="estado_input" placeholder="Estado" disabled>
-        
+
       </form>
     </section>
   </main>

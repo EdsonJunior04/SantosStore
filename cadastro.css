@@ -1,11 +1,10 @@
 .container_title{
 
-    display: flex;
-    justify-content: center;
+    margin-left: 1%;
 
 }
 .container_title h1{
-    font-size: 40px;
+    font-size: 2em;
 }
 
 .container_form{

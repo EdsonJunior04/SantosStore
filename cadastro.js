@@ -1,5 +1,5 @@
 const tableBody = document.querySelector('tbody');
-const addButton = document.querySelector('button');
+const addButton = document.querySelector('#btnCadastro');
 const errorMessageElement = document.createElement('p'); // Crie um elemento para exibir a mensagem de erro
 
 function addNovaLinha() {
@@ -28,6 +28,7 @@ function addNovaLinha() {
 
   const nome = document.createElement('td');
   nome.textContent = name;
+  nome.classList.add("nome")
   novaLinha.appendChild(nome);
 
   const produto = document.createElement('td');

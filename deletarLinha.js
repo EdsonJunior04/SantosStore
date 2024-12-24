@@ -1,44 +1,29 @@
-// let clicksCount = 0;
-// let linhaAnteriorClicada = null; 
-
-
-// tableBody.addEventListener('click', function (event) {
-//   const linhaClicada = event.target.closest('tr');
-
-//   function excluirLinha(linha) {
-//     tableBody.removeChild(linha);
-//   }
-
-//   if (linhaClicada && linhaClicada.classList.contains('cliente')) {
-//     if (linhaClicada === linhaAnteriorClicada) { 
-//       clicksCount++; 
-//     } else {
-//       clicksCount = 1; 
-//     }
-
-//     linhaAnteriorClicada = linhaClicada; 
-
-//     if (clicksCount === 2) {
-//       excluirLinha(linhaClicada);
-//       clicksCount = 0;
-//       linhaAnteriorClicada = null;
-//     } else {
-      
-//       console.log("Clique novamente para excluir a linha.");
-//     }
-//   }
-// });
-
-
-
-
-
 var tabela = document.querySelector("table");
 
-tabela.addEventListener("dblclick", function(event){
-    event.target.parentNode.classList.add("fadeOut");
+// A função para remover a encomenda da lista de encomendas
+function removerEncomendaDaLista(nomeEncomenda) {
+    const index = encomendasAdicionadas.indexOf(nomeEncomenda);
+    if (index !== -1) {
+        encomendasAdicionadas.splice(index, 1); // Remove o nome da encomenda da lista
+    }
+}
 
-    setTimeout(function(){
-        event.target.parentNode.remove();
-    }, 500);
-})
+tabela.addEventListener("dblclick", function(event){
+    const linha = event.target.parentNode;
+    
+    // Verifica se a linha existe e tem a classe 'cliente'
+    if (linha && linha.classList.contains("cliente")) {
+        // Pega o nome da encomenda na linha
+        const nomeEncomenda = linha.querySelector(".nome").textContent;
+
+        // Remove a encomenda da lista de encomendas adicionadas
+        removerEncomendaDaLista(nomeEncomenda);
+        
+        // Aplica a animação de fadeOut e remove a linha após 500ms
+        linha.classList.add("fadeOut");
+        
+        setTimeout(function(){
+            linha.remove();
+        }, 500);
+    }
+});

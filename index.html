@@ -4,153 +4,135 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="cadastro.css">
+  <link rel="stylesheet" href="style.css">
   <title>SantosStore</title>
 </head>
 
 <body>
   <header>
-    <div class="logo_caixa">
-      <img src="https://txwzi764nr.map.azionedge.net/Custom/Content/Themes/Shared/Images/logo-santos-store-2.png"
+    <div class="logo-caixa">
+      <img src="./assets/santos.jpg"
         title="SantosStore logo" class="logo" />
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="index.html#calcula">Buscar Localidade</a></li>
           <li><a href="index.html#cadastro">Cadastrar Encomendas</a></li>
-
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
+    <section class="produtos">
+      <div id="tabelaEx" class="titulo-separador">
+        <h1>Produtos</h1>
+      </div>
 
-
-    <div id="tabelaEx" class="titulo-separador">
-      <h1>Produtos</h1>
-    </div>
-    
-
-    <div class="container_filter">
-      <div class="posicaoFilter">
-        <!-- <label for="filtrarTabela">Filtrar: </label> -->
+      <div class="container-filter">
         <input type="text" id="filtrar-tabela" placeholder="Pesquisar produto">
       </div>
-    </div>
 
-    <table id="tabela" class="tabela">
-      <thead>
-        <tr>
-          <th>Nome</th>
-          <th>Produto</th>
-          <th>Quantidade</th>
-          <th>Valor</th>
-          <th>Total</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="cliente">
-          <td class="nome">Camisa Branca do Santos de Jogo</td>
-          <td class="produto">Camisa de Jogo</td>
-          <td class="qtde">10</td>
-          <td class="valorUnitario">100</td>
-          <td class="valorTotal">-</td>
-        </tr>
-        <tr class="cliente">
-          <td class="nome">Camisa Listrada do Santos de Jogo</td>
-          <td class="produto">Camisa de Jogo</td>
-          <td class="qtde">2</td>
-          <td class="valorUnitario">95</td>
-          <td class="valorTotal">-</td>
-        </tr>
-        <tr class="cliente">
-          <td class="nome">Agasalho Completo de Viagem</td>
-          <td class="produto">Agasalho de Frio</td>
-          <td class="qtde">5</td>
-          <td class="valorUnitario">150</td>
-          <td class="valorTotal">-</td>
-        </tr>
-        <tr class="cliente">
-          <td class="nome">Bola de Futebol do Santos</td>
-          <td class="produto">Equipamentos esportivo</td>
-          <td class="qtde">4</td>
-          <td class="valorUnitario">80</td>
-          <td class="valorTotal">-</td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="container_btnEncomendas">
-      <button id="buscar-encomendas" class="bot btnEncomendas">Buscar Encomendas</button>
-    </div>
-    <hr>
+      <table id="tabela" class="tabela">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Valor</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="cliente">
+            <td class="nome">Camisa Branca do Santos de Jogo</td>
+            <td class="produto">Camisa de Jogo</td>
+            <td class="qtde">10</td>
+            <td class="valorUnitario">100</td>
+            <td class="valorTotal">-</td>
+          </tr>
+          <tr class="cliente">
+            <td class="nome">Camisa Listrada do Santos de Jogo</td>
+            <td class="produto">Camisa de Jogo</td>
+            <td class="qtde">2</td>
+            <td class="valorUnitario">95</td>
+            <td class="valorTotal">-</td>
+          </tr>
+          <tr class="cliente">
+            <td class="nome">Agasalho Completo de Viagem</td>
+            <td class="produto">Agasalho de Frio</td>
+            <td class="qtde">5</td>
+            <td class="valorUnitario">150</td>
+            <td class="valorTotal">-</td>
+          </tr>
+          <tr class="cliente">
+            <td class="nome">Bola de Futebol do Santos</td>
+            <td class="produto">Equipamentos esportivo</td>
+            <td class="qtde">4</td>
+            <td class="valorUnitario">80</td>
+            <td class="valorTotal">-</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <!-- Mensagem de que não há mais encomendas para adicionar -->
+      <div id="mensagemNenhumaEncomenda" style="display: none; color: red; text-align: center; margin-top: 20px;">
+        <p>Todas as encomendas já foram adicionadas!</p>
+      </div>
 
-    <section id="cadastro" class="container_title">
-      <h1>Adicionar nova encomenda</h1>
+      <div class="container-btn-encomendas">
+        <button id="buscar-encomendas" class="btn btn-encomendas">Buscar Encomendas</button>
+      </div>
     </section>
-    
-    <section class="container_form">
-      <form action="">
 
-        <label for="nome_input" name="nome_label" id="nome_label">Nome:</label>
-        <input type="text" id="nome_input" name="nome_input" placeholder="Digite o nome do(a) cliente">
+    <section id="cadastro" class="cadastro">
+      <h2>Adicionar nova encomenda</h2>
+      <form action="" class="form-cadastro">
+        <label for="nome_input">Nome:</label>
+        <input type="text" id="nome_input" name="nome_input" placeholder="Digite o nome do(a) cliente" required>
 
+        <label for="qtde_input">Qtde:</label>
+        <input type="number" id="qtde_input" name="qtde_input" placeholder="Digite a quantidade" required>
 
-        <label for="qtde_input" id="qtde_label" name="qtde_label">Qtde:</label>
-        <input type="number" id="qtde_input" name="qtde_input" placeholder="Digite a quantidade encomendada">
-
-
-        <label for="produto_select" id="produto_label" name="produto_label">Produto:</label>
+        <label for="produto_select">Produto:</label>
         <select name="produto_select" id="produto_select">
           <option value="Camisa de Jogo">Camisa de Jogo</option>
           <option value="Agasalho de Frio">Agasalho de Frio</option>
           <option value="Equipamentos esportivo">Equipamentos esportivo</option>
         </select>
 
-        <label for="valorUnitario_input" id="valorUnitario_label" name="valorUnitario_label">R$
-          Unitário:</label>
-        <input type="text" name="valorUnitario_input" id="valorUnitario_input"
-          placeholder="Digite o valor unitário do produto">
+        <label for="valorUnitario_input">Valor Unitário:</label>
+        <input type="number" id="valorUnitario_input" name="valorUnitario_input" placeholder="Valor unitário" required>
 
-        <div class="message_error"></div>
+        <div class="message-error"></div>
 
-        <div class="container_btnCadastro">
-          <button id="btnCadastro" class="btnCadastro">Adicionar</button>
-        </div>
-
+        <button id="btnCadastro" class="btn btn-cadastro">Adicionar</button>
       </form>
     </section>
-    <hr>
-    <section id="calcula" class="container_title">
-      <h1>Buscar Localidade</h1>
-    </section>
-    
-    <section class="container_form">
-      <form action="">
 
-        <label for="cep_input" name="cep_label" id="cep_label">CEP:</label>
-        <input type="text" id="cep_input" name="cep_input" placeholder="Digite o seu CEP">
+    <section id="calcula" class="calcula">
+      <h2>Buscar Localidade</h2>
+      <form class="form-calcula">
+        <label for="cep_input">CEP:</label>
+        <input type="text" id="cep_input" name="cep_input" placeholder="Digite o CEP" required>
 
+        <label for="logradouro_input">Rua:</label>
+        <input type="text" id="logradouro_input" name="logradouro_input" disabled>
 
-        <label for="logradouro_input" id="logradouro_label" name="logradouro_label">Rua</label>
-        <input type="text" id="logradouro_input" name="logradouro_input" placeholder="Rua" disabled>
+        <label for="bairro_input">Bairro:</label>
+        <input type="text" id="bairro_input" name="bairro_input" disabled>
 
-        <label for="bairro_input" id="bairro_label" name="bairro_label">Bairro:</label>
-        <input type="test" id="bairro_input" name="bairro_input" placeholder="Bairro" disabled>
+        <label for="cidade_input">Cidade:</label>
+        <input type="text" id="cidade_input" name="cidade_input" disabled>
 
-
-        <label for="cidade_input" id="cidade_label" name="cidade_label">Cidade:</label>
-        <input type="text" name="cidade_input" id="cidade_input" placeholder="Cidade" disabled>
-
-        <label for="estado_input" id="estado_label" name="estado_label">Estado:</label>
-        <input type="text" name="estado_input" id="estado_input" placeholder="Estado" disabled>
-
+        <label for="estado_input">Estado:</label>
+        <input type="text" id="estado_input" name="estado_input" disabled>
       </form>
     </section>
   </main>
-  <script src='./calculaTotal.js'></script>
-  <script src='cadastro.js'></script>
+
+  <script src="calculaTotal.js"></script>
+  <script src="cadastro.js"></script>
   <script src="deletarLinha.js"></script>
   <script src="filtrar.js"></script>
   <script src="buscarCEP.js"></script>

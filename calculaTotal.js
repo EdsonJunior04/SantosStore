@@ -9,7 +9,6 @@ for (var count = 0; count < clientes.length; count++) {
     // Captura o valor unitário da encomenda
     var unitarioElement = clientes[count].querySelector(".valorUnitario").textContent;
 
-
     if(validaQtde()){
         console.log(validaQtde());
         if(validaValorUnitario()) {
@@ -17,8 +16,6 @@ for (var count = 0; count < clientes.length; count++) {
             clientes[count].querySelector(".valorUnitario").textContent = moedaFormata(unitarioElement);
         }
     }
-    // validaTotal();
-    // moedaUni();
 }
 
 function validaQtde() {
@@ -39,38 +36,15 @@ function validaValorUnitario() {
         return true;
     }
 }
-/* 
-function validaTotal() {
-    if (qtde > 0 && unitarioElement > 0) {
-        clientes[count].querySelector(".valorTotal").textContent = moeda();
-        clientes[count].querySelector(".valorUnitario").textContent = unitarioElement.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-    } else {
-        clientes[count].querySelector(".valorTotal").textContent = "Verifique os valores!!!";
-    }
 
-} */
 
 function calculaTotal(num1, num2) {
-    //quantidade = parseFloat(qtde);
-    //valorUnitario = parseFloat(unitarioElement);
+
     valorTotal = num1 * num2;
-    //valor = valorTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+   
     return moedaFormata(valorTotal);
 }
 
-/* function moeda() {
-    quantidade = parseFloat(qtde);
-    valorUnitario = parseFloat(unitarioElement);
-    valorTotal = quantidade * valorUnitario;
-    valor = valorTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-    return valor;
-} */
-
-/* function moedaUni() {
-    valorUnitario = parseFloat(unitarioElement);
-    valorUnitario.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-    return valorUnitario;
-} */
 
 function moedaFormata(valor) {
 

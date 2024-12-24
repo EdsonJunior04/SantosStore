@@ -1,191 +1,206 @@
+/* Estilos Gerais */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    border: 0;
+    background-color: #f4f4f4;
 }
 
 header {
-    background-color: black;
+    background-color: #333;
     color: white;
-    position: fixed; /* Torna o header fixo */
-    top: 0; /* Posiciona o header no topo */
-    width: 100%; /* Define a largura do header como 100% da viewport */
-    z-index: 2; /* Define a ordem de camadas para garantir que o header fique sobre o conteúdo */
+    padding: 20px 0; /* Ajuste da altura do cabeçalho */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adicionando sombra para dar destaque ao header */
 }
 
-.logo {
-    width: 30%;
-}
-
-/* Estilização do LOGOTIPO */
-.logo_caixa {
-    width: 940px;
-    position: relative;
-    margin: auto;
+.logo-caixa {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    max-width: 150px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 nav li {
-    margin-right: 20px;
+    margin-left: 20px;
 }
 
 nav a {
     text-decoration: none;
     color: white;
-    position: relative;
+    font-size: 18px;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    border: 1px solid red;
-    padding: 4px;
-    border-radius: 4px;
+    color: #ffab00;
 }
 
+/* Main section */
+main {
+    padding-top: 160px; /* Ajustado para dar espaço adequado para o header */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Ajustes de título */
 .titulo-separador {
-
-    margin: 130px 0 0 1%;
-    /* margin-top: 130px; */
+    margin-top: 100px; /* Ajuste para o título não ficar sobreposto */
 }
 
-.titulo-separador h2 {
-    margin-bottom: 10px;
+.titulo-separador h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-hr {
-    border: 1px solid #ddd;
-}
-
+/* Tabela */
 .tabela {
-    width: 60%;
-    margin: 0 auto; /* Centraliza a tabela */
+    width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
 .tabela th, .tabela td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    padding: 10px;
     text-align: left;
+    border: 1px solid #ccc;
 }
 
 .tabela th {
-    background-color: #f2f2f2;
+    background-color: #333;
+    color: white;
 }
 
-/* Adicionando valores na coluna do total */
-.tabela td:nth-child(6) {
+.tabela tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Formulários */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+label {
+    margin: 10px 0 5px;
     font-weight: bold;
-    color: red;
+    font-size: 16px;
+    color: #333;
 }
 
-#filtrar-tabela{
-    width: 19.5%;
+input, select {
+    width: 80%;
+    max-width: 500px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80%;
+    max-width: 500px;
+    margin-top: 20px; /* Adicionando espaço superior para o botão */
+}
+
+button:hover {
+    background-color: #721aff;
+}
+
+/* Centralização do botão de buscar encomenda */
+.container-btn-encomendas {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Barra de pesquisa centralizada */
+.container-filter {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#filtrar-tabela {
+    width: 100%;
+    max-width: 600px;
     height: 35px;
-    margin-bottom: 10px;
+    font-size: 16px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-.invisivel{
+/* Linha invisível quando não é encontrada no filtro */
+.invisivel {
     display: none;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 100px;
+    }
 
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 
-/* Calcular frete */
+    .produtos, .cadastro, .calcula {
+        margin: 20px;
+    }
 
+    .container-filter input {
+        width: 100%;
+        max-width: 300px;
+    }
 
+    table, th, td {
+        font-size: 14px;
+    }
 
-.container_filter{
-    display: flex;
-    justify-content: center;
+    button {
+        width: 100%;
+    }
 }
 
-.posicaoFilter{
-    width: 100%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .logo {
+        max-width: 120px;
+    }
 
-.posicaoFilter input{
-    display: flex;
-    justify-content: center;
-    /* flex-direction: column; */
-    width: 19.5%;
-    height: 35px;
-    font-size: 20px;
-    margin-bottom: 20px;
-    /* background-color: yellowgreen; */
-    border: 1px solid black;    
-    border-radius: 10px;
-    padding-left: 10px;
+    .produtos, .cadastro, .calcula {
+        margin: 40px;
+    }
 }
-
-.container_btnCadastro{
-    display: flex;
-    justify-content: center;
-}
-
-.btnCadastro{
-    background-color: black;
-    color: white;
-    font-size: 20px;
-    border: none;
-    width: 100%;
-    height: 6vh;
-    border-radius: 10px;
-}
-
-.btnCadastro:hover{
-    background-color: white;
-    color: black;
-    font-size: 20px;
-    border: 1px solid;
-    width: 100%;
-    height: 6vh;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.container_btnEncomendas{
-    display: flex;
-    justify-content: center;
-    margin: 3% 0% 3% 0%;
-    width: 100%;
-}
-
-.btnEncomendas{
-    background-color: black;
-    color: white;
-    font-size: 20px;
-    border: none;
-    width: 20%;
-    height: 6vh;
-    border-radius: 10px;
-}
-
-.btnEncomendas:hover{
-    background-color: white;
-    color: black;
-    font-size: 20px;
-    border: 1px solid;
-    width: 20%;
-    height: 6vh;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-hr {
-   display: flex;
-   justify-content: flex-start;
-   align-items: center; 
-   width: 75%;
-}
-

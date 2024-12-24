@@ -1,10 +1,10 @@
 function buscarCep(cep) {
     // Validação do CEP (opcional)
     cep = cep.replace(/\D/g, ''); // Remove caracteres que não são dígitos
-    // if (cep.length !== 8) {
-    //   alert('CEP inválido!');
-    //   return false;
-    // }
+    if (cep.length !== 8) {
+      alert('CEP inválido!');
+      return false;
+    }
   
     // URL da API ViaCEP
     const url = `https://viacep.com.br/ws/${cep}/json/`;
